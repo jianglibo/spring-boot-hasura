@@ -1,0 +1,18 @@
+
+spring:
+  config:
+    import: optional:file:env.test.properties
+app:
+  output_separator: "08877f24-464a-4867-b58c-6b500349dae1"
+  plugin_exec_folder: ${PLUGIN_EXEC_FOLDER:./plugin-exec-folder}
+  hasura_secret:  ${HASURA_SECRET} 
+  hasura_callback_secret: ${HASURA_CALLBACK_SECRET}
+  hasura_end_point: ${HASURA_ENDPOINT}
+  hasura_base_uri: http://hasura
+  instance-check-interval: ${INSTANCE_CHECK_INTERVAL:1000000} # default 10 seconds.
+  executor-check-interval: 60 # default 60 seconds.
+  max-executor-time: 14400 # 4 hours
+  runuser: true
+  plugin-default-enabled: true
+  author-default-enabled: true
+  test-value: ${TEST_VALUE} 
